@@ -152,8 +152,8 @@ section.about .social a{
     display:flex;
     align-items:center;
     justify-content:center;
-    width:35px;
-    height:35px;
+    width:50px;
+    height:50px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -165,9 +165,6 @@ section.about .social a{
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
-}
-section.about .social a:hover{
-    background:var(--primary);
 }
 section.about .social a img{
     width:100%;
@@ -181,6 +178,65 @@ section.about .social a img{
    margin-bottom:1rem;
    line-height: 0.5;
 }
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Increase gap between icons */
+    margin-top: 20px;
+}
+
+.social a {
+    position: relative; /* For positioning the tooltip */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Increase size of the circle */
+    height: 100px; /* Increase size of the circle */
+    border-radius: 50%;
+    background-color: #333; /* Default background color for icons */
+    text-decoration: none; /* Remove underline from links */
+    transition: transform 0.3s;
+}
+
+.social a i {
+    font-size: 24px;
+    color: #fff; /* Default color for icons */
+    padding: 10px; /* Increase padding between icon and circle */
+    transition: color 0.3s; /* Transition for icon color */
+}
+
+.social a:hover {
+    transform: scale(1.3);
+}
+
+.social a:hover i {
+    color: var(--primary); /* Color for icon on hover */
+}
+
+/* Tooltip styling */
+.social a::after {
+    content: attr(data-tooltip); /* Use data-tooltip attribute for tooltip text */
+    position: absolute;
+    bottom: -40px; /* Increase distance below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-size: 14px;
+}
+
+.social a:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
 .section-heading span{
     color:var(--primary);
 }
