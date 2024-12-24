@@ -247,20 +247,20 @@ section.about .social a img{
    margin-bottom:8rem;
     text-align: center;
 }
-section.services{
+section.skills{
     background:var(--light);
 }
-section.services .card-wrapper{
+section.skills .card-wrapper{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap:2rem;
     grid-row-gap:6rem;
 }
-section.services .card-wrapper .card{
+section.skills .card-wrapper .card{
     background:var(--pure);
     padding: 3rem 2rem;
     position:relative;
-    padding-top:5rem;
+    padding-top:2rem;
     text-align: center;
     transition: all .3s ease;
     -webkit-transition: all .3s ease;
@@ -268,31 +268,21 @@ section.services .card-wrapper .card{
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
 }
-section.services .card-wrapper .card img{
-    position: absolute;
-    top:-3.5rem;
-    left:50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-}
-section.services .card-wrapper .card h2{
+section.skills .card-wrapper .card h2{
     font-weight: 400;
     font-size: 1.2rem;
     margin-bottom:0.5rem;
 }
-section.services .card-wrapper .card p{
+section.skills .card-wrapper .card p{
     font-family: 'Lato', sans-serif;
     color:var(--ternary);
     line-height:1.6;
 }
 
-section.services .card-wrapper .card:hover{
+section.skills .card-wrapper .card:hover{
     background: var(--dark);  
 }
-section.services .card-wrapper .card:hover h2, section.services .card-wrapper .card:hover p{
+section.skills .card-wrapper .card:hover h2, section.skills .card-wrapper .card:hover p{
     color:var(--pure);
 }
 
@@ -629,7 +619,7 @@ footer .copyright{
     section.about .about-me-img{
         height: 360px;
     }
-    section.services .card-wrapper{
+    section.skills .card-wrapper{
         grid-template-columns: repeat(2, 1fr);
     }
     section.work .card-wrapper{
@@ -674,7 +664,7 @@ footer .copyright{
     section{
         padding: 4rem 0;
     }
-    section.services .card-wrapper{
+    section.skills .card-wrapper{
         grid-template-columns: repeat(1, 1fr);
         margin-top:6rem;
     }
@@ -746,4 +736,62 @@ footer .copyright{
     color: var(--secondary);
     margin-top: 5px;
     display: block;
+}
+
+.skills {
+    margin-top: 40px;
+}
+
+.skills .section-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary);
+    text-align: center;
+}
+
+.skills .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skills .card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.skills .icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px; /* Half of the height to make it half inside and half outside */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skills .icon-box i {
+    font-size: 24px;
+}
+
+.skills .card h2 {
+    font-size: 20px;
+    margin-top: 40px; /* Add margin to avoid overlap with the icon */
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skills .card p {
+    color: #666;
+    font-size: 14px;
 }
