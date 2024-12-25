@@ -1,11 +1,14 @@
 @import 'utilities.css';
 :root{
     --primary:#3DCFD3;
+    --primary-light: rgba(0, 123, 255, 0.05);
     --dark:#161616;
     --pure:#FFFFFF;
     --ternary:#898989;
     --light:#F2F2F2;
     --secondary:#070606;
+    --light-background: rgba(249, 249, 249, 0.6); 
+
 }
 
 body{
@@ -250,7 +253,7 @@ section.about .social a img{
     text-align: center;
 }
 section.skills{
-    background:var(--light);
+      background-color: var(--light-background) ;
 }
 section.skills .card-wrapper{
     display:grid;
@@ -288,23 +291,25 @@ section.skills .card-wrapper .card:hover h2, section.skills .card-wrapper .card:
     color:var(--pure);
 }
 
-section.contactme{
+section.contactme {
     text-align: center;
-    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/camera.png);
-    color:var(--pure);
-    clip-path:polygon(0 0, 100% 0, 100% 100%, 67% 80%, 0 100%);
-    padding-bottom:14rem;
-}
-section.contactme h1{
-    font-size:3rem;
-    margin-bottom:0.5rem;
-}
-section.contactme p{
-    font-size:1.3rem;
-    margin-bottom: 2rem;
-    font-family:'Lato', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/camera.png);
+    color: var(--pure);
+    clip-path: polygon(0 0, 33% 20%, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* محاذاة المحتوى إلى الأسفل */
+    height: 400px; /* تأكد من أن القسم يأخذ كامل ارتفاع الشاشة */
 }
 
+section.contactme h1 {
+    font-size: 3rem;
+}
+
+section.contactme p {
+    font-size: 1.3rem;
+    font-family: 'Lato', sans-serif;
+}
 section.reviews .slider .slide img{
     width:100px;
     height:100px;
@@ -800,6 +805,7 @@ footer .copyright{
 
 .experience {
     margin-top: 40px;
+    background-color: var(--light-background)
 }
 
 .experience .section-heading {
@@ -926,7 +932,6 @@ footer .copyright{
 
 .operations-projects {
     margin-top: 40px;
-    background-color: #f9f9f9; /* Different background color */
     padding: 40px 20px;
     border-radius: 10px;
 }
@@ -946,22 +951,22 @@ footer .copyright{
 
 .operations-projects .projects-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 
 .operations-projects .project-item {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 4px 15px rgba(0, 0, 0, 0.15); /* تخفيف الشادو */
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .operations-projects .project-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 8px 30px rgba(0, 0, 0, 0.15); /* تخفيف الشادو عند التحويم */
 }
 
 .operations-projects .project-item h3 {
