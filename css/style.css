@@ -923,3 +923,91 @@ footer .copyright{
 .contactme .btn:hover {
     background-color: var(--secondary);
 }
+
+.operations-projects {
+    margin-top: 40px;
+    background-color: #f9f9f9; /* Different background color */
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.operations-projects .section-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary);
+    text-align: center;
+}
+
+.operations-projects p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.operations-projects .projects-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.operations-projects .project-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.operations-projects .project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.operations-projects .project-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.operations-projects .project-item p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.operations-projects .project-item .project-image {
+    width: 60%;
+    height: 140px; /* Unified height for all project images */
+    object-fit: fill;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.operations-projects .project-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Ensure buttons stay within the card */
+}
+
+.operations-projects .btn i {
+    font-size: 30px;
+    color:var(--primary); /* Ensure icons are visible */
+}
+
+.operations-projects .project-links .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.operations-projects .btn-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Ensure images fit within the button */
+}
+
+.operations-projects .btn i:hover {
+    color: var(--secondary);
+}
