@@ -174,7 +174,9 @@ section.about .social a img{
 }
 
 .section-heading{
-   color:var(--secondary); 
+   font-size: 24px;
+   margin-bottom: 40px; /* Add margin-bottom to create space after the title */
+   color:var(--primary); 
    text-align: center;
    margin-bottom:1rem;
    line-height: 0.5;
@@ -286,18 +288,18 @@ section.skills .card-wrapper .card:hover h2, section.skills .card-wrapper .card:
     color:var(--pure);
 }
 
-section.freelancer{
+section.contactme{
     text-align: center;
     background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/camera.png);
     color:var(--pure);
     clip-path:polygon(0 0, 100% 0, 100% 100%, 67% 80%, 0 100%);
     padding-bottom:14rem;
 }
-section.freelancer h1{
+section.contactme h1{
     font-size:3rem;
     margin-bottom:0.5rem;
 }
-section.freelancer p{
+section.contactme p{
     font-size:1.3rem;
     margin-bottom: 2rem;
     font-family:'Lato', sans-serif;
@@ -668,10 +670,10 @@ footer .copyright{
         grid-template-columns: repeat(1, 1fr);
         margin-top:6rem;
     }
-    section.freelancer h1{
+    section.contactme h1{
         line-height:1.2;
     }
-    section.freelancer{
+    section.contactme{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 90%, 0 100%);
         padding-bottom: 8rem;
     }
@@ -794,4 +796,130 @@ footer .copyright{
 .skills .card p {
     color: #666;
     font-size: 14px;
+}
+
+.experience {
+    margin-top: 40px;
+}
+
+.experience .section-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary);
+    text-align: center;
+}
+
+.experience .experience-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 80px;
+}
+
+.experience .experience-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience .experience-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.experience .experience-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.experience .experience-item div {
+    flex-grow: 1;
+}
+
+.experience .experience-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.experience .experience-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.experience .experience-item p strong {
+    color: #333;
+}
+
+.contactme {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.contactme h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.contactme p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.contactme .social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contactme .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.contactme .social a:hover {
+    transform: scale(1.1);
+    background-color: var(--secondary);
+}
+
+.contactme .social a i {
+    font-size: 24px;
+}
+
+.contactme .btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.contactme .btn:hover {
+    background-color: var(--secondary);
 }
