@@ -298,18 +298,39 @@ section.contactme {
     clip-path: polygon(0 0, 33% 20%, 100% 0, 100% 100%, 0 100%);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* محاذاة المحتوى إلى الأسفل */
-    height: 400px; /* تأكد من أن القسم يأخذ كامل ارتفاع الشاشة */
+    justify-content: center; /* توسيط المحتوى عموديًا */
+    align-items: center; /* توسيط المحتوى أفقيًا */
+    padding: 10px 0; /* إضافة بعض الحشو لتجنب تداخل المحتوى */
+    height: auto; /* ضبط الارتفاع ليكون متناسبًا مع المحتوى */
 }
 
 section.contactme h1 {
     font-size: 3rem;
+    margin-top: 10rem;
+}
+
+section.contactme h3 {
+    margin-bottom: 1rem; /* إضافة مسافة أسفل العنوان */
 }
 
 section.contactme p {
     font-size: 1.3rem;
+    margin-bottom: 2rem;
     font-family: 'Lato', sans-serif;
 }
+
+section.contactme .social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem; /* إضافة مسافة أسفل الأيقونات الاجتماعية */
+}
+
+section.contactme .btn {
+    margin-top: 1rem; /* إضافة مسافة أعلى الزر */
+    margin-bottom: 3rem; 
+}
+
 section.reviews .slider .slide img{
     width:100px;
     height:100px;
@@ -515,11 +536,13 @@ section.contact .btn-wrapper{
     margin-top:2rem;
 }
 
+
 footer{
     background:var(--dark);
     text-align: center;
     padding:5rem 0;
 }
+
 footer .footer-logo{
     margin-bottom:3rem;
     width:150px;
@@ -868,16 +891,14 @@ footer .copyright{
 
 .contactme {
     text-align: center;
-    padding: 40px 20px;
+    padding: 10px 10px;
     background-color: #f9f9f9;
-    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 .contactme h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 18px;
     color: var(--primary);
 }
 
@@ -928,6 +949,11 @@ footer .copyright{
 
 .contactme .btn:hover {
     background-color: var(--secondary);
+}
+.contactme .logo{
+    width:150px;
+    justify-content: center;
+
 }
 
 .operations-projects {
