@@ -566,7 +566,7 @@ section.about .social a img {
 
 .operations-projects .project-item h3 {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     color: #333;
 }
 
@@ -576,7 +576,7 @@ section.about .social a img {
 }
 
 .operations-projects .project-item .project-image {
-    width: 60%;
+    width: 90%;
     height: 140px; /* Unified height for all project images */
     object-fit: fill;
     margin-bottom: 20px;
@@ -590,21 +590,10 @@ section.about .social a img {
     flex-wrap: wrap; /* Ensure buttons stay within the card */
 }
 
-.operations-projects .btn i {
-    font-size: 30px;
-    color: var(--primary); /* Ensure icons are visible */
-}
-
-.operations-projects .project-links .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .operations-projects .btn-icon img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 10px; /* Ensure images fit within the button */
 }
 
@@ -655,8 +644,9 @@ section.contactme p {
 section.contactme .social {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem; /* Add space below social icons */
+    flex-wrap: wrap; /* Ensure icons wrap on smaller screens */
+    gap: 10px; /* Add space between icons */
+    margin-bottom: 20px;
 }
 
 section.contactme .btn {
