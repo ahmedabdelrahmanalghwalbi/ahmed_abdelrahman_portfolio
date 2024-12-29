@@ -785,15 +785,6 @@ section.contactme .logo {
     section.skills .card-wrapper{
         grid-template-columns: repeat(2, 1fr);
     }
-    section.work .card-wrapper{
-        grid-template-columns: repeat(2,1fr);
-    }
-    section.blog .card-wrapper{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    section.blog{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 97%, 0 100%);
-    }
 }
 
 
@@ -834,10 +825,6 @@ section.contactme .logo {
     }
     section.contactme h1{
         line-height:1.2;
-    }
-    section.contactme{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 90%, 0 100%);
-        padding-bottom: 8rem;
     }
     .section-heading + p{
         margin-bottom: 3rem;
