@@ -208,6 +208,7 @@ section.about .social a img {
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    flex-direction: column; /* Align items vertically */
 }
 
 .splash-content {
@@ -232,7 +233,7 @@ section.about .social a img {
 .progress {
     width: 0;
     height: 100%;
-    background-color: var(--primary);
+    background: linear-gradient(to right, var(--primary), var(--dark));
     animation: progress-animation 3s linear forwards;
 }
 
@@ -243,6 +244,21 @@ section.about .social a img {
     100% {
         width: 100%;
     }
+}
+
+.splash-text {
+    margin-top: 20px; /* Add space between progress bar and text */
+}
+
+.splash-text h1 {
+    font-size: 1.5rem; /* Smaller font size */
+    margin: 5px 0;
+    color: var(--primary);
+}
+
+.splash-text h3 {
+    font-size: 1rem; /* Smaller font size */
+    color: var(--secondary);
 }
 
 /* Hide splash screen after animation */
