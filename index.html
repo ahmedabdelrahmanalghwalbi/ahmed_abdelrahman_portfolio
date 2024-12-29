@@ -650,6 +650,11 @@
         </section>
     </div>
 
+    <!-- Floating Button -->
+    <button id="scrollToTopBtn" class="scrollToTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -659,6 +664,24 @@
             setTimeout(function() {
                 document.body.classList.add('loaded');
             }, 4000);
+        });
+
+        // Show or hide the button based on scroll position
+        window.addEventListener('scroll', function() {
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Scroll to top when the button is clicked
+        document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     </script>
 </body>
