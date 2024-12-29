@@ -34,11 +34,11 @@
             <button class="times"><img src="./assets/images/times.svg" alt=""></button>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Operations & Projects</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#operations-projects">Operations & Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
 
@@ -681,6 +681,27 @@
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamberger = document.querySelector('.hamberger');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const times = document.querySelector('.times');
+            const navLinks = document.querySelectorAll('.mobile-nav ul li a');
+
+            hamberger.addEventListener('click', function() {
+                mobileNav.classList.add('show');
+            });
+
+            times.addEventListener('click', function() {
+                mobileNav.classList.remove('show');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileNav.classList.remove('show');
+                });
             });
         });
     </script>
