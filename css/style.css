@@ -301,7 +301,7 @@ section.about .social a img {
     margin-bottom: 40px; /* Add margin-bottom to create space after the title */
     color: var(--primary);
     text-align: center;
-    line-height: 0.5;
+    line-height: 1.2;
 }
 
 /* Social Icons */
@@ -520,15 +520,7 @@ section.about .social a img {
     color: #333;
 }
 
-
-
-
-
-
-
-
-
-/* Operations & Projects Section */
+/* General Styles for Operations & Projects Section */
 .operations-projects {
     margin-top: 40px;
     padding: 40px 20px;
@@ -540,12 +532,16 @@ section.about .social a img {
     margin-bottom: 20px;
     color: var(--primary);
     text-align: center;
+    word-wrap: break-word; /* Ensure long words break to the next line */
 }
+
 
 .operations-projects p {
     text-align: center;
     margin-bottom: 40px;
     color: #666;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
 .operations-projects .projects-wrapper {
@@ -616,13 +612,16 @@ section.about .social a img {
     color: var(--secondary);
 }
 
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .operations-projects .section-heading {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
 
-
-
-
-
-
-
+    .operations-projects .section-description {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
 
 /* Contact Me Section */
 section.contactme {
